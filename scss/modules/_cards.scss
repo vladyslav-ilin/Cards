@@ -1,0 +1,110 @@
+.cards{
+  background: url(../../images/bgr.jpg) no-repeat;
+  background-size: cover;
+  padding: 10px 0;
+  &__wrapper{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap
+  }
+  &__items{
+    @include size(150px, 215px);
+    margin: 5px;
+    cursor: pointer;
+    perspective: 800px;
+  }
+  &__item{
+    @include size(100%);
+    display: flex;
+    justify-content: space-between;
+    transform-style: preserve-3d;
+    transition: all .7s ease-out;
+    &:hover{
+      transform: rotateY(-180deg);
+    }
+  }
+
+  &__reverce{
+    @include size(100%);
+    @include pos($pos: absolute);
+    background: url('../../images/cards-bgr.jpg') no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    transform: translate3d(0, 0, 0px);
+  }
+  &__list{
+    @include pos($pos: absolute);
+    @include size(100%);
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    background: #fff;
+    transform: rotateY(180deg) translate3d(0, 0, 0px);
+    &::before{
+      @include align(true, true, absolute);
+      content: '\2764';
+      color: red;
+      font-size: 70px;
+    }
+    &--peak{
+      &::before{
+        color: #000;
+        content: '\2660';
+      }
+    }
+    &--cross{
+      &::before{
+        color: #000;
+        content: '\2663';
+      }
+    }
+    &--timb{
+      &::before{
+        color: red;
+        content: '\2666';
+      }
+    }
+  }
+  &__number{
+    font-size: 24px;
+    font-weight: 700;
+    color: red;
+    @include pos($t: 10px, $l: 10px, $pos: absolute);
+    &::before{
+      @include pos($t: 25px, $l: 0px, $pos: absolute);
+      content: '\2764';
+      font-size: 14px;
+    }
+    &--peak{
+      color: #000;
+      &::before{
+        color: #000;
+        content: '\2660';
+        font-size: 26px;
+      }
+    }
+    &--cross{
+      color: #000;
+      &::before{
+        color: #000;
+        content: '\2663';
+        font-size: 26px;
+      }
+    }
+    &--timb{
+      color: red;
+      &::before{
+        color: red;
+        content: '\2666';
+        font-size: 26px;
+      }
+    }
+    &--bottom{
+      @include pos($b: 10px, $r: 10px, $t: auto, $l: auto, $pos: absolute);
+      transform: rotate(180deg);
+    }
+  }
+
+}
