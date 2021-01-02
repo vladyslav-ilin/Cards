@@ -1,5 +1,5 @@
 .cards{
-  background: url(../../images/bgr.jpg) no-repeat;
+  background: url(../images/bgr.jpg) no-repeat;
   background-size: cover;
   padding: 10px 0;
   &__wrapper{
@@ -29,7 +29,7 @@
   &__reverce{
     @include size(100%);
     @include pos($pos: absolute);
-    background: url('../../images/cards-bgr.jpg') no-repeat;
+    background: url('../images/cards-bgr.jpg') no-repeat;
     background-size: cover;
     border-radius: 10px;
     transform: translate3d(0, 0, 0px);
