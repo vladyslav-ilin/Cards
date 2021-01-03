@@ -133,8 +133,6 @@ body, html {
   background: url("../images/cards-bgr.jpg") no-repeat;
   background-size: cover;
   border-radius: 10px;
-  -webkit-transform: translate3d(0, 0, 0px);
-          transform: translate3d(0, 0, 0px);
 }
 
 .cards__list {
@@ -145,8 +143,8 @@ body, html {
   padding: 10px;
   border-radius: 10px;
   background: #fff;
-  -webkit-transform: rotateY(180deg) translate3d(0, 0, 0px);
-          transform: rotateY(180deg) translate3d(0, 0, 0px);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 .cards__list::before {

@@ -32,7 +32,6 @@
     background: url('../images/cards-bgr.jpg') no-repeat;
     background-size: cover;
     border-radius: 10px;
-    transform: translate3d(0, 0, 0px);
   }
   &__list{
     @include pos($pos: absolute);
@@ -41,7 +40,7 @@
     padding: 10px;
     border-radius: 10px;
     background: #fff;
-    transform: rotateY(180deg) translate3d(0, 0, 0px);
+    transform: rotateY(180deg);
     &::before{
       @include align(true, true, absolute);
       content: '\2764';
